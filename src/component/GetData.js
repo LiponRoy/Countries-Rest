@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import DisplayData from './DisplayData';
 
 const GetData = () => {
 	const [countries, setcountries] = useState([]);
@@ -11,9 +12,13 @@ const GetData = () => {
 
 	return (
 		<div>
-			{countries.map((country, key) => (
-				<p key={key}>{country.name.common}</p>
-			))}
+			<div className='row'>
+				{countries.map((country, key) => (
+					<div key={key} className='col-md-3'>
+						<DisplayData name={country.name.common} popu={country.population} flag={country.flags.png}></DisplayData>
+					</div>
+				))}
+			</div>
 		</div>
 	);
 };
