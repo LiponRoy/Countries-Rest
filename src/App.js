@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import GetData from './component/GetData';
 
 function App() {
 	return (
 		<div className='App'>
-			<h1>Get all country information using rest countries api(lipon)</h1>
+			<GetData></GetData>
 		</div>
 	);
 }
